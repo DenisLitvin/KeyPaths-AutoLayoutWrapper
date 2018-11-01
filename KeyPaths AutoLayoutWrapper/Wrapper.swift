@@ -30,6 +30,7 @@ func equal<L, Axis>(_ from: KeyPath<UIView, L>,
         view1[keyPath: from].constraint(equalTo: view2[keyPath: to], constant: constant)
     }
 }
+
 func equal<L>(_ keyPath: KeyPath<UIView, L>, constant: CGFloat) -> Constraint where L: NSLayoutDimension {
     return { view1, _ in
         view1[keyPath: keyPath].constraint(equalToConstant: constant)
